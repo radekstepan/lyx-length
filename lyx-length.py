@@ -6,7 +6,7 @@ import re
 import time
 import gntp.notifier
 
-lyx = ["\\", "LatexCommand", "bibfiles", "options", "eqs-within-sections", "figs-within-sections"]
+lyx = ["\\", "LatexCommand", "bibfiles", "options", "eqs-within-sections", "figs-within-sections", "key", "#"]
 
 # More complete example
 growl = gntp.notifier.GrowlNotifier(
@@ -30,6 +30,7 @@ if __name__ == '__main__':
 			    				text = False
 			    				break
 			    		if text:
+			    			print line
 		    				length += len(re.findall(r'\w+', line))
 			f.closed
 
