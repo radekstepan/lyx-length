@@ -30,6 +30,7 @@ if __name__ == '__main__':
 			    				text = False
 			    				break
 			    		if text:
+			    			print line
 		    				length += len(re.findall(r'\w+', line))
 			f.closed
 
